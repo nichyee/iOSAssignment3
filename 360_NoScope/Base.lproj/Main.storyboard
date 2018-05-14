@@ -34,11 +34,17 @@
                                 <rect key="frame" x="126" y="278" width="122" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="High Scores"/>
+                                <connections>
+                                    <segue destination="Kw4-Qh-C0R" kind="show" id="jAm-Nq-mB4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJX-4f-hpa">
                                 <rect key="frame" x="151" y="327" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="Qph-Se-1fx" kind="show" id="T9t-JQ-306"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -104,7 +110,7 @@
                         <viewLayoutGuide key="safeArea" id="0Co-P8-1J6"/>
                     </view>
                     <connections>
-                        <segue destination="vVq-Lb-xQ3" kind="unwind" identifier="unwindToSegueMenu" unwindAction="unwindToMenuWithSegue:" id="duy-12-ofq"/>
+                        <segue destination="vVq-Lb-xQ3" kind="unwind" identifier="unwindSegueToMenu" unwindAction="unwindToMenuWithSegue:" id="duy-12-ofq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWb-0A-0tC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -145,7 +151,7 @@
                         <viewLayoutGuide key="safeArea" id="Ell-lZ-Vrb"/>
                     </view>
                     <connections>
-                        <segue destination="XPU-yf-V2A" kind="unwind" identifier="unwindToSegueMenu" unwindAction="unwindToMenuWithSegue:" id="7vC-vx-0ON"/>
+                        <segue destination="XPU-yf-V2A" kind="unwind" identifier="unwindSegueToMenu" unwindAction="unwindToMenuWithSegue:" id="7vC-vx-0ON"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lel-zu-WZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
