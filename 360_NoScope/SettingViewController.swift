@@ -11,6 +11,9 @@ import UIKit
 
 class SettingViewController: ViewController{
     
+    @IBOutlet var difficultyLabel: UILabel!
+    @IBOutlet var difficultySlider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,4 +27,8 @@ class SettingViewController: ViewController{
     @IBAction func goBackToMenu(_ sender: Any) {
         performSegue(withIdentifier: "unwindSegueToMenu", sender: self)
     }
+    
+    
+    //ToDo
+    //Make label say what difficulty is.
 }
