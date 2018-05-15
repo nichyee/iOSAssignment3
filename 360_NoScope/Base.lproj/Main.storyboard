@@ -244,6 +244,7 @@
                         <viewLayoutGuide key="safeArea" id="Ell-lZ-Vrb"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="smu-JL-PeO" id="8k2-dv-rf8"/>
                         <segue destination="XPU-yf-V2A" kind="unwind" identifier="unwindSegueToMenu" unwindAction="unwindToMenuWithSegue:" id="7vC-vx-0ON"/>
                     </connections>
                 </viewController>
