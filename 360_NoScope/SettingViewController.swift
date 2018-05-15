@@ -12,7 +12,7 @@ import UIKit
 class SettingViewController: UIViewController{
     
     @IBOutlet var difficultyLabel: UILabel!
-    @IBOutlet weak var downBUtton: UIButton!
+    @IBOutlet weak var downButton: UIButton!
     @IBOutlet weak var upButton: UIButton!
     
     var difficultyValue : Int = 1
@@ -51,18 +51,21 @@ class SettingViewController: UIViewController{
         
     }
     
+    @IBAction func sliderValuePrint(_ sender: UISlider) {
+        print(Int(sender.value))
+    }
     func updateDifficulty() {
         switch difficultyValue {
         case 0:
             difficultyLabel.text = "Easy"
-            downBUtton.isEnabled = false
+            downButton.isEnabled = false
         case 2:
             difficultyLabel.text = "Hard"
             upButton.isEnabled = false
         default:
             difficultyLabel.text = "Medium"
             upButton.isEnabled = true
-            downBUtton.isEnabled = true
+            downButton.isEnabled = true
             
         }
     }
