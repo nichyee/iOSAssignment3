@@ -93,7 +93,7 @@
                                 </constraints>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggX-Fc-kVJ">
-                                <rect key="frame" x="294" y="239" width="79" height="21"/>
+                                <rect key="frame" x="294" y="239" width="69" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="AD7-iS-66w"/>
                                 </constraints>
@@ -101,15 +101,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="F0K-DZ-lMC">
-                                <rect key="frame" x="274" y="278" width="119" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="uh3-A7-WFU"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="difficultySliderChange:" destination="Qph-Se-1fx" eventType="valueChanged" id="goM-4N-eQs"/>
-                                </connections>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NZ-YX-C4c">
                                 <rect key="frame" x="299" y="20" width="69" height="25"/>
                                 <constraints>
@@ -136,8 +127,25 @@
                                 </constraints>
                                 <state key="normal" title="Save"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBN-eG-vIr">
-                                <rect key="frame" x="267" y="315" width="124" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUs-sK-CJK">
+                                <rect key="frame" x="416" y="278" width="30" height="30"/>
+                                <state key="normal" title="Up"/>
+                                <connections>
+                                    <action selector="increaseDifficulty:" destination="Qph-Se-1fx" eventType="touchUpInside" id="BW4-5y-U9n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9x1-bE-m6i">
+                                <rect key="frame" x="226" y="278" width="39" height="30"/>
+                                <state key="normal" title="Down"/>
+                                <connections>
+                                    <action selector="decreaseDifficulty:" destination="Qph-Se-1fx" eventType="touchUpInside" id="64S-7P-wo5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBN-eG-vIr">
+                                <rect key="frame" x="276" y="278" width="124" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="3mh-3e-t6d"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -145,35 +153,35 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="GBN-eG-vIr" firstAttribute="leading" secondItem="FRz-r3-TPV" secondAttribute="leading" id="0HO-MU-1nU"/>
                             <constraint firstItem="FRz-r3-TPV" firstAttribute="leading" secondItem="0Co-P8-1J6" secondAttribute="leading" constant="276" id="0JG-uj-NSs"/>
                             <constraint firstItem="ggX-Fc-kVJ" firstAttribute="leading" secondItem="0Co-P8-1J6" secondAttribute="leading" constant="294" id="0g8-KI-57z"/>
                             <constraint firstItem="AIN-M7-DAH" firstAttribute="top" secondItem="0Co-P8-1J6" secondAttribute="top" constant="29" id="Azq-Ok-sNx"/>
-                            <constraint firstItem="FRz-r3-TPV" firstAttribute="leading" secondItem="F0K-DZ-lMC" secondAttribute="leading" id="BMl-6v-cQi"/>
                             <constraint firstItem="0NZ-YX-C4c" firstAttribute="centerX" secondItem="LDc-cS-5ff" secondAttribute="centerX" id="BPK-DA-Yb2"/>
                             <constraint firstItem="bTC-1d-vIP" firstAttribute="leading" secondItem="RzM-W7-7Bw" secondAttribute="leading" constant="165" id="CfS-CD-FZf"/>
+                            <constraint firstItem="GBN-eG-vIr" firstAttribute="leading" secondItem="9x1-bE-m6i" secondAttribute="trailing" constant="11" id="EIl-km-Nw6"/>
                             <constraint firstItem="0NZ-YX-C4c" firstAttribute="top" secondItem="RzM-W7-7Bw" secondAttribute="top" constant="20" symbolic="YES" id="JGB-Xf-KVc"/>
                             <constraint firstItem="bTC-1d-vIP" firstAttribute="top" secondItem="0Co-P8-1J6" secondAttribute="top" constant="592" id="Lhr-jG-jsE"/>
                             <constraint firstItem="AIN-M7-DAH" firstAttribute="leading" secondItem="0Co-P8-1J6" secondAttribute="leading" constant="16" id="MEu-YI-UKh"/>
                             <constraint firstItem="0NZ-YX-C4c" firstAttribute="centerX" secondItem="RzM-W7-7Bw" secondAttribute="centerX" id="OkW-Ix-Ybz"/>
                             <constraint firstItem="ggX-Fc-kVJ" firstAttribute="top" secondItem="FRz-r3-TPV" secondAttribute="bottom" constant="33" id="Pmk-i3-3hv"/>
-                            <constraint firstItem="GBN-eG-vIr" firstAttribute="leading" secondItem="0Co-P8-1J6" secondAttribute="leading" constant="267" id="Ty6-Ef-fVa"/>
+                            <constraint firstItem="KUs-sK-CJK" firstAttribute="leading" secondItem="GBN-eG-vIr" secondAttribute="trailing" constant="16" id="RbD-wx-KrU"/>
+                            <constraint firstItem="GBN-eG-vIr" firstAttribute="top" secondItem="ggX-Fc-kVJ" secondAttribute="bottom" constant="18" id="Vhi-fv-bfR"/>
                             <constraint firstItem="FRz-r3-TPV" firstAttribute="top" secondItem="LDc-cS-5ff" secondAttribute="bottom" constant="27" id="XHV-IC-2QA"/>
                             <constraint firstItem="LDc-cS-5ff" firstAttribute="centerX" secondItem="FRz-r3-TPV" secondAttribute="centerX" id="Yip-a4-8X8"/>
-                            <constraint firstItem="ggX-Fc-kVJ" firstAttribute="centerX" secondItem="F0K-DZ-lMC" secondAttribute="centerX" id="Znv-Lp-20V"/>
                             <constraint firstItem="LDc-cS-5ff" firstAttribute="top" secondItem="0NZ-YX-C4c" secondAttribute="bottom" constant="84" id="cBo-gj-C75"/>
-                            <constraint firstItem="F0K-DZ-lMC" firstAttribute="top" secondItem="ggX-Fc-kVJ" secondAttribute="bottom" constant="18" id="fHD-Hz-tj0"/>
-                            <constraint firstItem="FRz-r3-TPV" firstAttribute="trailing" secondItem="F0K-DZ-lMC" secondAttribute="trailing" id="guh-tY-ra8"/>
+                            <constraint firstItem="0Co-P8-1J6" firstAttribute="bottom" secondItem="GBN-eG-vIr" secondAttribute="bottom" constant="65" id="ioa-mo-sRR"/>
                             <constraint firstItem="0Co-P8-1J6" firstAttribute="trailing" secondItem="0NZ-YX-C4c" secondAttribute="trailing" constant="299" id="j0Y-zS-EST"/>
-                            <constraint firstItem="GBN-eG-vIr" firstAttribute="top" secondItem="F0K-DZ-lMC" secondAttribute="bottom" constant="8" symbolic="YES" id="jRm-fk-0ex"/>
                             <constraint firstItem="LDc-cS-5ff" firstAttribute="leading" secondItem="0Co-P8-1J6" secondAttribute="leading" constant="299" id="jlC-bd-HiK"/>
-                            <constraint firstItem="F0K-DZ-lMC" firstAttribute="trailing" secondItem="GBN-eG-vIr" secondAttribute="trailing" id="rwu-sU-z23"/>
-                            <constraint firstAttribute="bottom" secondItem="GBN-eG-vIr" secondAttribute="bottom" constant="20" symbolic="YES" id="wTQ-Tf-IZg"/>
+                            <constraint firstItem="GBN-eG-vIr" firstAttribute="top" secondItem="9x1-bE-m6i" secondAttribute="top" id="rtl-gf-oUJ"/>
+                            <constraint firstItem="GBN-eG-vIr" firstAttribute="top" secondItem="KUs-sK-CJK" secondAttribute="top" id="zWs-8I-is0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Co-P8-1J6"/>
                     </view>
                     <connections>
                         <outlet property="difficultyLabel" destination="GBN-eG-vIr" id="AVW-v5-CqW"/>
-                        <outlet property="difficultySlider" destination="F0K-DZ-lMC" id="6z5-mJ-9rE"/>
+                        <outlet property="downBUtton" destination="9x1-bE-m6i" id="YjY-zZ-GYm"/>
+                        <outlet property="upButton" destination="KUs-sK-CJK" id="dih-vv-QqP"/>
                         <segue destination="vVq-Lb-xQ3" kind="unwind" identifier="unwindSegueToMenu" unwindAction="unwindToMenuWithSegue:" id="duy-12-ofq"/>
                     </connections>
                 </viewController>

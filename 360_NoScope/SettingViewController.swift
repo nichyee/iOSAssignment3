@@ -12,7 +12,11 @@ import UIKit
 class SettingViewController: UIViewController{
     
     @IBOutlet var difficultyLabel: UILabel!
-    @IBOutlet var difficultySlider: UISlider!
+    @IBOutlet weak var downBUtton: UIButton!
+    @IBOutlet weak var upButton: UIButton!
+    
+    var difficultyValue : Int = 1
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,18 +32,39 @@ class SettingViewController: UIViewController{
         performSegue(withIdentifier: "unwindSegueToMenu", sender: self)
     }
     
+    @IBAction func increaseDifficulty(_ sender: Any) {
+        if(difficultyValue < 2 )
+        {
+            difficultyValue += 1
+            print(difficultyValue)
+            updateDifficulty()
+        }
+    }
     
-    @IBAction func difficultySliderChange(_ sender: UISlider) {
-        let value = Int(sender.value)
-        switch value {
-        case 0:
-            difficultyLabel.text = "Easy"
-        case 2:
-            difficultyLabel.text = "Hard"
-        default:
-            difficultyLabel.text = "Medium"
+    @IBAction func decreaseDifficulty(_ sender: Any) {
+        if(difficultyValue > 0)
+        {
+            difficultyValue -= 1
+            print(difficultyValue)
+            updateDifficulty()
         }
         
+    }
+    
+    func updateDifficulty() {
+        switch difficultyValue {
+        case 0:
+            difficultyLabel.text = "Easy"
+            downBUtton.isEnabled = false
+        case 2:
+            difficultyLabel.text = "Hard"
+            upButton.isEnabled = false
+        default:
+            difficultyLabel.text = "Medium"
+            upButton.isEnabled = true
+            downBUtton.isEnabled = true
+            
+        }
     }
     
     
