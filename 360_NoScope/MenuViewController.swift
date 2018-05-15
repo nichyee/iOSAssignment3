@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MenuViewController : ViewController {
+class MenuViewController : UIViewController {
     
     
     override func viewDidLoad() {
