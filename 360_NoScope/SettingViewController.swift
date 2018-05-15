@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SettingViewController: ViewController{
+class SettingViewController: UIViewController{
     
     @IBOutlet var difficultyLabel: UILabel!
     @IBOutlet var difficultySlider: UISlider!
@@ -26,6 +26,20 @@ class SettingViewController: ViewController{
     
     @IBAction func goBackToMenu(_ sender: Any) {
         performSegue(withIdentifier: "unwindSegueToMenu", sender: self)
+    }
+    
+    
+    @IBAction func difficultySliderChange(_ sender: UISlider) {
+        let value = Int(sender.value)
+        switch value {
+        case 0:
+            difficultyLabel.text = "Easy"
+        case 2:
+            difficultyLabel.text = "Hard"
+        default:
+            difficultyLabel.text = "Medium"
+        }
+        
     }
     
     
