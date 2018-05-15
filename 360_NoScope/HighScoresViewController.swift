@@ -27,11 +27,13 @@ class HighScoresViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //todo, make sure to get the list of name/scores
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
+        //todo - replace text with that from a list of name/scores
         cell.textLabel?.text = "blah"
         cell.detailTextLabel?.text = "I am Subtitle"
         return cell
