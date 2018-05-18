@@ -162,6 +162,8 @@
                         <outlet property="difficultyLabel" destination="GBN-eG-vIr" id="AVW-v5-CqW"/>
                         <outlet property="downButton" destination="9x1-bE-m6i" id="YjY-zZ-GYm"/>
                         <outlet property="muteSwitch" destination="FZK-pr-pct" id="F17-n6-Z5b"/>
+                        <outlet property="offLabel" destination="M2z-Pt-zrv" id="lLQ-0R-eIz"/>
+                        <outlet property="onLabel" destination="lhu-Ru-f5A" id="hBd-am-lze"/>
                         <outlet property="upButton" destination="KUs-sK-CJK" id="dih-vv-QqP"/>
                         <segue destination="vVq-Lb-xQ3" kind="unwind" identifier="unwindSegueToMenu" unwindAction="unwindToMenuWithSegue:" id="duy-12-ofq"/>
                     </connections>

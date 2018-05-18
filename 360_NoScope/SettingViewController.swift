@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import AVFoundation
+var audioPlayer:AVAudioPlayer?
 
 class SettingViewController: UIViewController{
     
@@ -15,12 +17,16 @@ class SettingViewController: UIViewController{
     @IBOutlet weak var downButton: UIButton!
     @IBOutlet weak var upButton: UIButton!
     @IBOutlet weak var muteSwitch: UISwitch!
+    @IBOutlet weak var onLabel: UILabel!
+    @IBOutlet weak var offLabel: UILabel!
     
     var difficultyValue : Int = 1
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        audioPlayer?.volume = 1.0
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -67,19 +73,20 @@ class SettingViewController: UIViewController{
             difficultyLabel.text = "Medium"
             upButton.isEnabled = true
             downButton.isEnabled = true
-            
         }
     }
     
     @IBAction func activateMute(_ sender: UISwitch) {
         if (sender.isOn) {
-            print("On")
-            
+            offLabel.isEnabled = false
+            onLabel.isEnabled = true
+            audioPlayer?.volume = 0.0
+            //print(audioPlayer?.volume)
         } else if (sender.isOn == false) {
-            print("Off")
+            offLabel.isEnabled = true
+            onLabel.isEnabled = false
+            audioPlayer?.volume = 1.0
+            //print(audioPlayer?.volume)
         }
     }
-    
-    //ToDo
-    //Make label say what difficulty is.
 }
