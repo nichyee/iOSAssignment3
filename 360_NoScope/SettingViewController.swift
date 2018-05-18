@@ -14,6 +14,7 @@ class SettingViewController: UIViewController{
     @IBOutlet var difficultyLabel: UILabel!
     @IBOutlet weak var downButton: UIButton!
     @IBOutlet weak var upButton: UIButton!
+    @IBOutlet weak var muteSwitch: UISwitch!
     
     var difficultyValue : Int = 1
     
@@ -70,6 +71,14 @@ class SettingViewController: UIViewController{
         }
     }
     
+    @IBAction func activateMute(_ sender: UISwitch) {
+        if (sender.isOn) {
+            print("On")
+            
+        } else if (sender.isOn == false) {
+            print("Off")
+        }
+    }
     
     //ToDo
     //Make label say what difficulty is.
