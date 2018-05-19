@@ -13,7 +13,7 @@ class MusicHelper{
     static let sharedHelper = MusicHelper()
     var audioPlayer: AVAudioPlayer?
     let aSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "bensound-buddy", ofType: "mp3")!)
-    //Music: https://www.bensound.com
+    //Music: https://www.bensound.com Found at: https://www.bensound.com/royalty-free-music/track/buddy
     
     func playBackgroundMusic() {
         do {
