@@ -80,13 +80,11 @@ class SettingViewController: UIViewController{
         if (sender.isOn) {
             offLabel.isEnabled = false
             onLabel.isEnabled = true
-            audioPlayer?.volume = 0.0
-            //print(audioPlayer?.volume)
+            MusicHelper.sharedHelper.muteMusic(tf: sender.isOn)
         } else if (sender.isOn == false) {
             offLabel.isEnabled = true
             onLabel.isEnabled = false
-            audioPlayer?.volume = 1.0
-            //print(audioPlayer?.volume)
+            MusicHelper.sharedHelper.muteMusic(tf: sender.isOn)
         }
     }
 }

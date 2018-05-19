@@ -15,6 +15,8 @@
 		ADB88BDC20AA442A004E96C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB88BDA20AA442A004E96C6 /* Main.storyboard */; };
 		ADB88BDE20AA442A004E96C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB88BDD20AA442A004E96C6 /* Assets.xcassets */; };
 		ADB88BE120AA442A004E96C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB88BDF20AA442A004E96C6 /* LaunchScreen.storyboard */; };
+		AFF732D320AFEABF00026288 /* MusicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF732D220AFEABF00026288 /* MusicHelper.swift */; };
+		AFF732D520AFEB2700026288 /* bensound-buddy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFF732D420AFEB2700026288 /* bensound-buddy.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		ADB88BDD20AA442A004E96C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADB88BE020AA442A004E96C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADB88BE220AA442A004E96C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF732D220AFEABF00026288 /* MusicHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHelper.swift; sourceTree = "<group>"; };
+		AFF732D420AFEB2700026288 /* bensound-buddy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "bensound-buddy.mp3"; path = "../../../Downloads/bensound-buddy.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				ADAF0FA920AA44AA0052F986 /* HighScoresViewController.swift */,
+				AFF732D220AFEABF00026288 /* MusicHelper.swift */,
 				ADAF0FA820AA44AA0052F986 /* MenuViewController.swift */,
 				ADAF0FA720AA44AA0052F986 /* SettingViewController.swift */,
 				ADB88BD620AA442A004E96C6 /* AppDelegate.swift */,
@@ -69,6 +74,7 @@
 				ADB88BDD20AA442A004E96C6 /* Assets.xcassets */,
 				ADB88BDF20AA442A004E96C6 /* LaunchScreen.storyboard */,
 				ADB88BE220AA442A004E96C6 /* Info.plist */,
+				AFF732D420AFEB2700026288 /* bensound-buddy.mp3 */,
 			);
 			path = 360_NoScope;
 			sourceTree = "<group>";
@@ -135,6 +141,7 @@
 				ADB88BE120AA442A004E96C6 /* LaunchScreen.storyboard in Resources */,
 				ADB88BDE20AA442A004E96C6 /* Assets.xcassets in Resources */,
 				ADB88BDC20AA442A004E96C6 /* Main.storyboard in Resources */,
+				AFF732D520AFEB2700026288 /* bensound-buddy.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +157,7 @@
 				ADB88BD720AA442A004E96C6 /* AppDelegate.swift in Sources */,
 				ADAF0FAA20AA44AA0052F986 /* SettingViewController.swift in Sources */,
 				ADAF0FAB20AA44AA0052F986 /* MenuViewController.swift in Sources */,
+				AFF732D320AFEABF00026288 /* MusicHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
