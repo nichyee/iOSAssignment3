@@ -17,6 +17,7 @@
 		ADB88BDC20AA442A004E96C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB88BDA20AA442A004E96C6 /* Main.storyboard */; };
 		ADB88BDE20AA442A004E96C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB88BDD20AA442A004E96C6 /* Assets.xcassets */; };
 		ADB88BE120AA442A004E96C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB88BDF20AA442A004E96C6 /* LaunchScreen.storyboard */; };
+		AFD60CB120B3A3220097570A /* bensound-buddy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFD60CB020B3A3220097570A /* bensound-buddy.mp3 */; };
 		AFF732D320AFEABF00026288 /* MusicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF732D220AFEABF00026288 /* MusicHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		ADB88BDD20AA442A004E96C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADB88BE020AA442A004E96C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADB88BE220AA442A004E96C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD60CB020B3A3220097570A /* bensound-buddy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-buddy.mp3"; sourceTree = "<group>"; };
 		AFF732D220AFEABF00026288 /* MusicHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 				ADB88BE220AA442A004E96C6 /* Info.plist */,
 				407973A720B2E93300CA0A14 /* GameViewController.swift */,
 				AD19E41C20B38EDE00B68D50 /* GameScene.swift */,
+				AFD60CB020B3A3220097570A /* bensound-buddy.mp3 */,
 			);
 			path = 360_NoScope;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				ADB88BE120AA442A004E96C6 /* LaunchScreen.storyboard in Resources */,
 				ADB88BDE20AA442A004E96C6 /* Assets.xcassets in Resources */,
 				ADB88BDC20AA442A004E96C6 /* Main.storyboard in Resources */,
+				AFD60CB120B3A3220097570A /* bensound-buddy.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
