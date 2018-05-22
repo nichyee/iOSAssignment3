@@ -26,10 +26,10 @@ class MusicHelper{
         }
     }
     
-    func muteMusic(tf: Bool){
-        if (tf) {
+    func muteMusic(trueFalse: Bool){
+        if (trueFalse) {
             audioPlayer!.volume = 1.0
-        } else if (tf == false) {
+        } else if (trueFalse == false) {
             audioPlayer!.volume = 0.0
         }
     }
