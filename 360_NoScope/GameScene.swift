@@ -27,7 +27,7 @@ class GameScene: SKScene {
                 
         }
         var translation = matrix_identity_float4x4
-        translation.columns.3.z = -0.1
+        translation.columns.3.z = -0.3
         let transform = currentFrame.camera.transform * translation
         let anchor = ARAnchor(transform: transform)
         sceneView.session.add(anchor: anchor)
