@@ -16,8 +16,15 @@ class GameViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let view = self.view as? ARSKView? {
+        if let view = self.view as? ARSKView {
             sceneView = view
+            sceneView!.delegate = self
+            let scene = GameScene(size: view.bounds.size)
+            scene.scaleMode = .resizeFill
+            scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+            view.presentScene(scene)
+            view.showsFPS = true
+            view.showsNodeCount = true
         }
     }
     
@@ -37,4 +44,22 @@ class GameViewController: UIViewController{
         sceneView.session.pause()
     }
     
+}
+extension GameViewController :ARSKViewDelegate {
+    func session(_session: ARSession, didFailWithError error: Error){
+        print("Session failed")
+    }
+    func sessionWasInterrupted(_ session: ARSession) {
+        print("session Interrupted")
+    }
+    func sessionInterruptionEnded(_ session: ARSession) {
+        print("Session Resumed")
+        sceneView.session.run(session.configuration!, options: [.resetTracking, .removeExistingAnchors])
+    }
+    
+    func view(_view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
+        let enemy = SKSpriteNode(imageNamed: "enemy.png")
+        enemy.name = "bug"
+        return enemy
+    }
 }
