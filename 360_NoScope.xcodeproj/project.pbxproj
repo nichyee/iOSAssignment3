@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		407973A820B2E93300CA0A14 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407973A720B2E93300CA0A14 /* GameViewController.swift */; };
 		AD19E41D20B38EDF00B68D50 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19E41C20B38EDE00B68D50 /* GameScene.swift */; };
+		AD3442FD20BBA22200F37456 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3442FC20BBA22200F37456 /* enemy.png */; };
 		ADAF0FAA20AA44AA0052F986 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF0FA720AA44AA0052F986 /* SettingViewController.swift */; };
 		ADAF0FAB20AA44AA0052F986 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF0FA820AA44AA0052F986 /* MenuViewController.swift */; };
 		ADAF0FAC20AA44AA0052F986 /* HighScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF0FA920AA44AA0052F986 /* HighScoresViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		407973A720B2E93300CA0A14 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		AD19E41C20B38EDE00B68D50 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		AD3442FC20BBA22200F37456 /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy.png; sourceTree = "<group>"; };
 		ADAF0FA720AA44AA0052F986 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		ADAF0FA820AA44AA0052F986 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		ADAF0FA920AA44AA0052F986 /* HighScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoresViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				407973A720B2E93300CA0A14 /* GameViewController.swift */,
 				AD19E41C20B38EDE00B68D50 /* GameScene.swift */,
 				AFD60CB020B3A3220097570A /* bensound-buddy.mp3 */,
+				AD3442FC20BBA22200F37456 /* enemy.png */,
 			);
 			path = 360_NoScope;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3442FD20BBA22200F37456 /* enemy.png in Resources */,
 				ADB88BE120AA442A004E96C6 /* LaunchScreen.storyboard in Resources */,
 				ADB88BDE20AA442A004E96C6 /* Assets.xcassets in Resources */,
 				ADB88BDC20AA442A004E96C6 /* Main.storyboard in Resources */,
@@ -303,11 +307,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XVR2T5X27U;
+				DEVELOPMENT_TEAM = FX33GTRKVF;
 				INFOPLIST_FILE = 360_NoScope/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-60.NoScope";
+				PRODUCT_BUNDLE_IDENTIFIER = "re-60.NoScope";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -319,11 +323,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XVR2T5X27U;
+				DEVELOPMENT_TEAM = FX33GTRKVF;
 				INFOPLIST_FILE = 360_NoScope/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-60.NoScope";
+				PRODUCT_BUNDLE_IDENTIFIER = "re-60.NoScope";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
