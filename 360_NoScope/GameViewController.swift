@@ -36,6 +36,7 @@ class GameViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
         sceneView.session.run(configuration)
     }
     
@@ -57,10 +58,12 @@ extension GameViewController :ARSKViewDelegate {
         sceneView.session.run(session.configuration!, options: [.resetTracking, .removeExistingAnchors])
     }
     
+    //send the image created from the spritenode
     func view(_ view: ARSKView,
               nodeFor anchor: ARAnchor) -> SKNode? {
         let enemy = SKSpriteNode(imageNamed: "enemy")
         enemy.name = "enemy"
         return enemy
     }
+    
 }

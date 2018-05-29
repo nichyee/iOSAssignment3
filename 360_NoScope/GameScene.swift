@@ -17,7 +17,7 @@ class GameScene: SKScene {
         return view as! ARSKView
     }
     var isWorldSetup = false
-    
+    let gameSize = CGSize(width: 2, height: 2)
     
     
     private func setUp() {
@@ -26,13 +26,31 @@ class GameScene: SKScene {
                 return
                 
         }
-        var translation = matrix_identity_float4x4
-        translation.columns.3.z = -0.3
-        let transform = currentFrame.camera.transform * translation
-        let anchor = ARAnchor(transform: transform)
-        sceneView.session.add(anchor: anchor)
+        
+        //creating a scene so we can place our objects
+        let scene = SKScene(size: CGSize(width: 350, height: 350))
+
+        //generating 10 of them at random positions
+        let val = 10
+        for _ in 0...val {
+            
+            //randomly find a position thats within screen bounds and place them onto the screen
+            //(essentially they float in the air)
+            var translation = matrix_identity_float4x4
+            let positionX = randomFloat(Min: -350, Max: 350) / Float(scene.size.width)
+            let positionY = randomFloat(Min: -350, Max: 350) / Float(scene.size.width)
+            translation.columns.3.x = Float(positionX * Float(gameSize.width))
+            translation.columns.3.z = -Float(positionY * Float(gameSize.height))
+            let transform = currentFrame.camera.transform * translation
+            let anchor = ARAnchor(transform: transform)
+            sceneView.session.add(anchor: anchor)
+            
+        }
+            //translation.columns.3.z = -0.3
+
+        
         isWorldSetup = true
-        print(isWorldSetup)
+        //print(isWorldSetup)
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -61,5 +79,9 @@ class GameScene: SKScene {
         }
     }
     
+    //return us a float between the two numbers we gave it
+    func randomFloat(Min: Float, Max: Float) -> Float {
+        return Min+(Max-Min)*(Float(arc4random())) / Float(UINT32_MAX)
+    }
 }
 
