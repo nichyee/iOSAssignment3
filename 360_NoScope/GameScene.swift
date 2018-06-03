@@ -18,6 +18,7 @@ class GameScene: SKScene {
     }
     var isWorldSetup = false
     let gameSize = CGSize(width: 2, height: 2)
+    var sight: SKSpriteNode!
     
     
     private func setUp() {
@@ -83,5 +84,36 @@ class GameScene: SKScene {
     func randomFloat(Min: Float, Max: Float) -> Float {
         return Min+(Max-Min)*(Float(arc4random())) / Float(UINT32_MAX)
     }
+    
+    
+    override func didMove(to view: SKView) {
+        sight = SKSpriteNode(imageNamed: "sight")
+        addChild(sight)
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>,
+                               with event: UIEvent?) {
+        print("Touching Screen")
+        let location = sight.position
+        let hitNodes = nodes(at: location)
+        var hitBug: SKNode?
+        for node in hitNodes {
+            if node.name == "enemy" {
+                hitBug = node
+                break
+            }
+        }
+        
+        if let hitBug = hitBug,
+            let anchor = sceneView.anchor(for: hitBug) {
+            let action = SKAction.run {
+                self.sceneView.session.remove(anchor: anchor)
+            }
+            hitBug.run(action)
+        }
+
+    }
+    
 }
 
