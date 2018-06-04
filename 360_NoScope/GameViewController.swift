@@ -13,7 +13,7 @@ class GameViewController: UIViewController{
     
     var sceneView: ARSKView!
     var timer = Timer()
-    var times = 10
+    var times = 30
     @IBOutlet weak var timeLabel: UILabel!
     var scene = GameScene()
     var numEnemies = Int()
