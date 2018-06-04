@@ -23,42 +23,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEg-Yr-FVq">
-                                <rect key="frame" x="126" y="297" width="484" height="30"/>
-                                <state key="normal" title="High Scores"/>
-                                <connections>
-                                    <segue destination="Kw4-Qh-C0R" kind="show" id="jAm-Nq-mB4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJX-4f-hpa">
-                                <rect key="frame" x="151" y="346" width="434" height="30"/>
-                                <state key="normal" title="Settings"/>
-                                <connections>
-                                    <segue destination="Qph-Se-1fx" kind="show" identifier="settings" id="T9t-JQ-306"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q97-df-N0D">
-                                <rect key="frame" x="172" y="243" width="392" height="30"/>
+                                <rect key="frame" x="172" y="275" width="392" height="30"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <segue destination="1ph-Xn-P8C" kind="show" identifier="game" id="4dl-6c-LPu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJX-4f-hpa">
+                                <rect key="frame" x="151" y="346" width="57" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="Qph-Se-1fx" kind="show" identifier="settings" id="T9t-JQ-306"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rEg-Yr-FVq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="2A0-3v-ZM8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P5s-sn-wGs" secondAttribute="trailing" constant="131" id="4aF-eD-YAK"/>
-                            <constraint firstItem="rEg-Yr-FVq" firstAttribute="top" secondItem="Q97-df-N0D" secondAttribute="bottom" constant="24" id="Mmm-Kf-5fm"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bJX-4f-hpa" secondAttribute="trailing" constant="20" symbolic="YES" id="G6D-Bl-5lC"/>
                             <constraint firstItem="Q97-df-N0D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Puh-UJ-FZF"/>
                             <constraint firstItem="P5s-sn-wGs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="277" id="WVN-ox-Eks"/>
                             <constraint firstItem="bJX-4f-hpa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="151" id="YkF-L8-57T"/>
-                            <constraint firstItem="bJX-4f-hpa" firstAttribute="centerX" secondItem="rEg-Yr-FVq" secondAttribute="centerX" id="ace-tQ-XpJ"/>
                             <constraint firstItem="P5s-sn-wGs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="ggf-C3-XWH"/>
-                            <constraint firstItem="bJX-4f-hpa" firstAttribute="top" secondItem="rEg-Yr-FVq" secondAttribute="bottom" constant="19" id="nfR-zo-TjS"/>
+                            <constraint firstItem="bJX-4f-hpa" firstAttribute="top" secondItem="Q97-df-N0D" secondAttribute="bottom" constant="41" id="lwg-Y1-JCT"/>
                             <constraint firstItem="Q97-df-N0D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="172" id="oJ3-Pn-uLP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bJX-4f-hpa" secondAttribute="bottom" constant="38" id="oky-J7-Plb"/>
-                            <constraint firstItem="Q97-df-N0D" firstAttribute="centerX" secondItem="rEg-Yr-FVq" secondAttribute="centerX" id="rsQ-c4-HVD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
