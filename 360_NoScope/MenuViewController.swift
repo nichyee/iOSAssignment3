@@ -11,11 +11,12 @@ import UIKit
 
 class MenuViewController : UIViewController {
     
+    var diffucultyValue = Int()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        MusicHelper.sharedHelper.playBackgroundMusic()
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,5 +26,20 @@ class MenuViewController : UIViewController {
     
     @IBAction func unwindToMenu(segue:UIStoryboardSegue){
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let sendDifficulty = diffucultyValue
+        if (segue.identifier == "settings") {
+            if let viewController = segue.destination as? SettingViewController {
+                viewController.difficultyValue = sendDifficulty
+            }
+        }
+        if (segue.identifier == "game") {
+            if let viewController = segue.destination as? GameViewController {
+                viewController.difficultyValue = sendDifficulty
+            }
+        }
+
     }
 }

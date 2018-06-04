@@ -12,20 +12,31 @@ import ARKit
 class GameViewController: UIViewController{
     
     var sceneView: ARSKView!
+    var timer = Timer()
+    var times = 10
+    @IBOutlet weak var timeLabel: UILabel!
+    var scene = GameScene()
+    var numEnemies = Int()
+    var difficultyValue = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //sets up the timer for the game
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(tick), userInfo: nil, repeats:true)
+        timeLabel.text = String(times)
+        
         if let view = self.view as? ARSKView {
             sceneView = view
             sceneView!.delegate = self
-            let scene = GameScene(size: view.bounds.size)
+            scene = GameScene(size: view.bounds.size)
             scene.scaleMode = .resizeFill
             scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
             view.presentScene(scene)
             view.showsFPS = true
             view.showsNodeCount = true
         }
+        scene.difficultValue = difficultyValue
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,6 +55,35 @@ class GameViewController: UIViewController{
         super.viewWillDisappear(animated)
         sceneView.session.pause()
     }
+    
+    @objc func tick() {
+        if (times == 0) {
+            timer.invalidate()
+            let score = scene.hits * 5
+            let alert = UIAlertController(title: "Game Over", message: "Congrats! Your score was \(score)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title:"Home", style: .default, handler: {
+                action in
+                self.performSegue(withIdentifier: "home", sender: self)
+            }))
+            self.present(alert, animated: true)
+        } else {
+            times -= 1
+            timeLabel.text = String(times)
+            if (times > 3) {
+                scene.generateEnemies()
+            }
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let sendDifficulty = difficultyValue
+        if (segue.identifier == "home") {
+            if let viewController = segue.destination as? MenuViewController {
+                viewController.diffucultyValue = sendDifficulty
+            }
+        }
+    }
+
+
     
 }
 extension GameViewController :ARSKViewDelegate {

@@ -19,34 +19,24 @@ class GameScene: SKScene {
     var isWorldSetup = false
     let gameSize = CGSize(width: 2, height: 2)
     var sight: SKSpriteNode!
+    var hits = Int()
+    var totalGeneration = Int()
+    var difficultValue = Int()
     
     
     private func setUp() {
-        guard let currentFrame = sceneView.session.currentFrame
+        guard sceneView.session.currentFrame != nil
             else {
                 return
                 
         }
+        hits = 0
+        totalGeneration = 0
         
         //creating a scene so we can place our objects
-        let scene = SKScene(size: CGSize(width: 350, height: 350))
+        _ = SKScene(size: CGSize(width: 350, height: 350))
 
-        //generating 10 of them at random positions
-        let val = 10
-        for _ in 0...val {
-            
-            //randomly find a position thats within screen bounds and place them onto the screen
-            //(essentially they float in the air)
-            var translation = matrix_identity_float4x4
-            let positionX = randomFloat(Min: -350, Max: 350) / Float(scene.size.width)
-            let positionY = randomFloat(Min: -350, Max: 350) / Float(scene.size.width)
-            translation.columns.3.x = Float(positionX * Float(gameSize.width))
-            translation.columns.3.z = -Float(positionY * Float(gameSize.height))
-            let transform = currentFrame.camera.transform * translation
-            let anchor = ARAnchor(transform: transform)
-            sceneView.session.add(anchor: anchor)
-            
-        }
+        generateEnemies()
             //translation.columns.3.z = -0.3
 
         
@@ -86,6 +76,26 @@ class GameScene: SKScene {
     }
     
     
+    func generateEnemies() {
+        //generating 1 to 3 of them at random positions
+        let val = Int(arc4random_uniform((UInt32(difficultValue)*3)+1))
+        for _ in 0...val {
+            
+            //randomly find a position thats within screen bounds and place them onto the screen
+            //(essentially they float in the air)
+            var translation = matrix_identity_float4x4
+            let positionX = randomFloat(Min: -350, Max: 350) / Float((scene?.size.width)!)
+            let positionY = randomFloat(Min: -350, Max: 350) / Float((scene?.size.width)!)
+            translation.columns.3.x = Float(positionX * Float(gameSize.width))
+            translation.columns.3.z = -Float(positionY * Float(gameSize.height))
+            let transform = (sceneView.session.currentFrame?.camera.transform)! * translation
+            let anchor = ARAnchor(transform: transform)
+            sceneView.session.add(anchor: anchor)
+            totalGeneration += 1
+        }
+    }
+    
+    
     override func didMove(to view: SKView) {
         sight = SKSpriteNode(imageNamed: "sight")
         addChild(sight)
@@ -111,9 +121,12 @@ class GameScene: SKScene {
                 self.sceneView.session.remove(anchor: anchor)
             }
             hitBug.run(action)
+            hits += 1
         }
 
     }
+    
+    
     
 }
 

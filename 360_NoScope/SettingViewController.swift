@@ -26,7 +26,7 @@ class SettingViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        audioPlayer?.volume = 1.0
+        updateDifficulty()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -87,4 +87,18 @@ class SettingViewController: UIViewController{
             MusicHelper.sharedHelper.muteMusic(trueFalse: sender.isOn)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let sendDifficulty = difficultyValue
+        if (segue.identifier == "unwindSegueToMenu") {
+            if let viewController = segue.destination as? MenuViewController {
+                viewController.diffucultyValue = sendDifficulty
+            }
+        }
+    }
+    
+    
+    
 }
+
+
