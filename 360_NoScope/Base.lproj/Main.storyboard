@@ -201,47 +201,5 @@
             </objects>
             <point key="canvasLocation" x="1661.413043478261" y="130.43478260869566"/>
         </scene>
-        <!--HighScores-->
-        <scene sceneID="caZ-nQ-l4w">
-            <objects>
-                <viewController title="HighScores" id="Kw4-Qh-C0R" customClass="HighScoresViewController" customModule="_60_NoScope" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LaT-Da-spT">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="smu-JL-PeO">
-                                <rect key="frame" x="72" y="66" width="676" height="289"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lb-Cg-xP3">
-                                <rect key="frame" x="72" y="29" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="goBackToMenu:" destination="Kw4-Qh-C0R" eventType="touchUpInside" id="fp1-eq-9PC"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Scores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HM-uq-Ccc">
-                                <rect key="frame" x="396" y="31" width="104" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Ell-lZ-Vrb"/>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="smu-JL-PeO" id="8k2-dv-rf8"/>
-                        <segue destination="XPU-yf-V2A" kind="unwind" identifier="unwindSegueToMenu" unwindAction="unwindToMenuWithSegue:" id="7vC-vx-0ON"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lel-zu-WZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="XPU-yf-V2A" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="780" y="1158"/>
-        </scene>
     </scenes>
 </document>
