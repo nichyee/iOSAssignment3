@@ -43,7 +43,6 @@ class SettingViewController: UIViewController{
         if(difficultyValue < 2 )
         {
             difficultyValue += 1
-            print(difficultyValue)
             updateDifficulty()
         }
     }
@@ -52,15 +51,11 @@ class SettingViewController: UIViewController{
         if(difficultyValue > 0)
         {
             difficultyValue -= 1
-            print(difficultyValue)
             updateDifficulty()
         }
         
     }
     
-    @IBAction func sliderValuePrint(_ sender: UISlider) {
-        print(Int(sender.value))
-    }
     func updateDifficulty() {
         switch difficultyValue {
         case 0:

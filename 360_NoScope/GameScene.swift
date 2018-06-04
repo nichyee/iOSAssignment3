@@ -104,7 +104,7 @@ class GameScene: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>,
                                with event: UIEvent?) {
-        print("Touching Screen")
+        //print("Touching Screen")
         let location = sight.position
         let hitNodes = nodes(at: location)
         var hitBug: SKNode?
