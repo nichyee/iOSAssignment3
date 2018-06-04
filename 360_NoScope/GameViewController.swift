@@ -26,6 +26,7 @@ class GameViewController: UIViewController{
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(tick), userInfo: nil, repeats:true)
         timeLabel.text = String(times)
         
+        //sets up the
         if let view = self.view as? ARSKView {
             sceneView = view
             sceneView!.delegate = self
@@ -56,6 +57,7 @@ class GameViewController: UIViewController{
         sceneView.session.pause()
     }
     
+    //what happens every second
     @objc func tick() {
         if (times == 0) {
             timer.invalidate()
@@ -74,6 +76,8 @@ class GameViewController: UIViewController{
             }
         }
     }
+    
+    //preparing for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let sendDifficulty = difficultyValue
         if (segue.identifier == "home") {
@@ -86,13 +90,17 @@ class GameViewController: UIViewController{
 
     
 }
+//Required Extension
 extension GameViewController :ARSKViewDelegate {
+    //If game didn't launch
     func session(_session: ARSession, didFailWithError error: Error){
         print("Session failed")
     }
+    //when the app is closed by user
     func sessionWasInterrupted(_ session: ARSession) {
         print("session Interrupted")
     }
+    //when the app is resumed by user
     func sessionInterruptionEnded(_ session: ARSession) {
         print("Session Resumed")
         sceneView.session.run(session.configuration!, options: [.resetTracking, .removeExistingAnchors])

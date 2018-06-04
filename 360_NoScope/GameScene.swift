@@ -80,7 +80,6 @@ class GameScene: SKScene {
         //generating 1 to 3 of them at random positions
         let val = Int(arc4random_uniform((UInt32(difficultValue)*3)+1))
         for _ in 0...val {
-            
             //randomly find a position thats within screen bounds and place them onto the screen
             //(essentially they float in the air)
             var translation = matrix_identity_float4x4
